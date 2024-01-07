@@ -7,7 +7,7 @@ A playground for testing out different cloud services with regards to crashes an
 Below is a matrix of the cloud services, SDK features and platforms. Clicking the cloud service name will take you to a
 more detailed section of the service. I have also attached notes to various parts for more information.
 
-> NOTE: The order of the services are alphabetical and are not a ranking or suggestion of preferred.
+> NOTE: The order of the services are alphabetical and are not a ranking or suggestion of preferred cloud provider.
 
 |                Service Name | Android | iOS | macOS | Windows |    Tizen     | .NET Ex |  Native Ex   |
 |----------------------------:|:-------:|:---:|:-----:|:-------:|:------------:|:-------:|:------------:|
@@ -30,10 +30,11 @@ more detailed section of the service. I have also attached notes to various part
 
 ### Notes
 
-1. <a name="n1"></a> **[New Relic]** Android native crash reporting is still in development and actually is not enabled for .NET MAUI Android apps:
+1. <a name="n1"></a> **[New Relic]** Android native crash reporting is still in development and actually is not enabled
+   for .NET MAUI Android apps:  
    https://docs.newrelic.com/docs/mobile-monitoring/mobile-monitoring-ui/crashes/investigate-mobile-app-crash-report/#android-native-reporting
-2. <a name="n2"></a> **[Sentry.io]** There is no explicit native Tizen SDK for Sentry, however the .NET SDK does have support for all .NET frameworks,
-   which includes the Tizen .NET SDK.
+2. <a name="n2"></a> **[Sentry.io]** There is no explicit native Tizen SDK for Sentry, however the .NET SDK does have
+   support for all .NET frameworks, which includes the Tizen .NET SDK.
 
 ## Types of Crashes & Exceptions
 
@@ -50,8 +51,8 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 **Links:**
 
 * Home: https://newrelic.com
-* Mobile: https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring
-* .NET MAUI Setup: https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-maui-dotnet/monitor-your-net-maui-application
+* Mobile: [**Introduction to mobile monitoring**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring)
+* .NET MAUI: [**Monitor your .NET MAUI mobile app**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-maui-dotnet/monitor-your-net-maui-application)
 
 **Pros:**
 
@@ -74,13 +75,16 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 **Links:**
 
 * Home: https://sentry.io
-* .NET MAUI Setup: https://docs.sentry.io/platforms/dotnet/guides/maui
+* .NET MAUI: [**Sentry for Multi-platform App UI (MAUI)**](https://docs.sentry.io/platforms/dotnet/guides/maui)
 
 **Pros:**
 
 * Easy setup - especially the integration with the builder
-* Fully open source SDKs: https://github.com/getsentry/sentry-dotnet
-* Native crash reports
+* Fully open source SDKs:
+  * .NET MAUI: https://github.com/getsentry/sentry-dotnet
+  * Android: https://github.com/getsentry/sentry-java
+  * iOS/macOS: https://github.com/getsentry/sentry-cocoa
+* Native crash reporting for Android, iOS and macOS
 * Catches exceptions from unobserved tasks
 
 **Cons:**
