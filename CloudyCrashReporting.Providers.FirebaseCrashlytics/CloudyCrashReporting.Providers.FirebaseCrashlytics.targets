@@ -1,0 +1,11 @@
+<Project>
+
+    <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+        <GoogleServicesJson Include="$(MSBuildThisFileDirectory)Platforms\Android\google-services.json" />
+    </ItemGroup>
+
+    <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
+        <BundleResource Include="$(MSBuildThisFileDirectory)Platforms\iOS\GoogleService-Info.plist" LogicalName="GoogleService-Info.plist" />
+    </ItemGroup>
+
+</Project>
