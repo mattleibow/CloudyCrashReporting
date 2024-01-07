@@ -2,33 +2,9 @@
 
 A playground for testing out different cloud services with regards to crashes and exceptions.
 
-## Types of Crashes & Exceptions
+## Overview
 
-In a mobile or desktop app, there are a few types of issues that can cause catastrophic failure:
-
-* Native code failures/exceptions
-* Unhandled exceptions in .NET/managed code
-* Exception reporting for handled exceptions
-
-There are also different platforms that need to be supported:
-
-* Android
-* iOS
-* Linux
-* macOS
-* Tizen
-* WASM
-* Windows
-
-In the case of a .NET MAUI app, we only support some of these: Android, iOS, macOS, Windows.
-
-Key:
-
-* ✅ -> fully supported
-* ➗ -> partially supported, see notes
-* ❌ -> not supported at all
-* ❔ -> unknown
-* ➖ -> TBD
+Below is a matrix of the cloud services, SDK features and platforms:
 
 |                   Service Name | Android | iOS | macOS | Windows |    Tizen     | .NET Ex |  Native Ex   |
 |-------------------------------:|:-------:|:---:|:-----:|:-------:|:------------:|:-------:|:------------:|
@@ -43,11 +19,17 @@ Key:
 |                                |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
 |                                |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
 
-Notes:
+> **Key**  
+> ✅ → fully supported  
+> ➗ → partially supported, see notes  
+> ❌ → not supported at all  
+> ➖ → unknown / yet to be determined  
 
-1. <a name="n1"></a> Android native crash reporting is still in development and actually is not enabled for .NET MAUI Android apps:
+### Notes
+
+1. <a name="n1"></a> **[New Relic]** Android native crash reporting is still in development and actually is not enabled for .NET MAUI Android apps:
    https://docs.newrelic.com/docs/mobile-monitoring/mobile-monitoring-ui/crashes/investigate-mobile-app-crash-report/#android-native-reporting
-2. <a name="n2"></a>There is no explicit native Tizen SDK for Sentry, however the .NET SDK does have support for all .NET frameworks,
+2. <a name="n2"></a> **[Sentry.io]** There is no explicit native Tizen SDK for Sentry, however the .NET SDK does have support for all .NET frameworks,
    which includes the Tizen .NET SDK.   
 
 <!-- START: links -->
@@ -55,6 +37,14 @@ Notes:
 [sentry]:  https://sentry.io/
 <!-- END: links -->
 
+
+## Types of Crashes & Exceptions
+
+In a mobile or desktop app, there are a few types of issues that can cause catastrophic failure:
+
+* Native code failures/exceptions
+* Unhandled exceptions in .NET/managed code
+* Exception reporting for handled exceptions
 
 ## Cloud Services
 
