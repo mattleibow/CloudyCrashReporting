@@ -5,14 +5,16 @@ A playground for testing out different cloud services with regards to crashes an
 ## Overview
 
 Below is a matrix of the cloud services, SDK features and platforms. Clicking the cloud service name will take you to a
-more detailed section of the service. I have also attached notes to various parts for more information. 
+more detailed section of the service. I have also attached notes to various parts for more information.
+
+> NOTE: The order of the services are alphabetical and are not a ranking or suggestion of preferred.
 
 |                Service Name | Android | iOS | macOS | Windows |    Tizen     | .NET Ex |  Native Ex   |
 |----------------------------:|:-------:|:---:|:-----:|:-------:|:------------:|:-------:|:------------:|
+|              **App Center** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|             **Crashlytics** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
 |                 **Datadog** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
 |               **Dynatrace** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|    **Firebase Crashlytics** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|    **Microsoft App Center** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
 | [**New Relic**](#new-relic) |    ✅    |  ✅  |   ❌   |    ❌    |      ❌       |    ✅    | ➗ [[1]](#n1) |
 |                  **Raygun** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
 |  [**Sentry.io**](#sentryio) |    ✅    |  ✅  |   ✅   |    ✅    | ➗ [[2]](#n2) |    ✅    |      ✅       |
