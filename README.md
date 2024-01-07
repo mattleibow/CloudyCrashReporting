@@ -24,28 +24,37 @@ In the case of a .NET MAUI app, we only support some of these: Android, iOS, mac
 
 Key:
 
-* ✔ -> fully supported
-* ~ -> partially supported, see notes
-* ✗ -> not supported at all
-* ? -> unknown
+* ✅ -> fully supported
+* ➗ -> partially supported, see notes
+* ❌ -> not supported at all
+* ❔ -> unknown
+* ➖ -> TBD
 
-|              Service Name | Android | iOS | macOS | Windows | Tizen | .NET Ex | Native Ex |
-|--------------------------:|:-------:|:---:|:-----:|:-------:|:-----:|:-------:|:---------:|
-|               **Datadog** |         |     |       |         |       |         |           |
-|             **Dynatrace** |         |     |       |         |       |         |           |
-|  **Firebase Crashlytics** |         |     |       |         |       |         |           |
-|  **Microsoft App Center** |         |     |       |         |       |         |           |
-| [**New Relic**][newrelic] |    ✔    |  ✔  |   ✗   |    ✗    |   ✗   |    ✔    |   ~ [1]   |
-|                **Raygun** |         |     |       |         |       |         |           |
-|   **[Sentry.io][sentry]** |    ✔    |  ✔  |   ✔   |    ✔    |   ~   |    ✔    |     ✔     |
-|                           |         |     |       |         |       |         |           |
-|                           |         |     |       |         |       |         |           |
-|                           |         |     |       |         |       |         |           |
+|                   Service Name | Android | iOS | macOS | Windows |    Tizen     | .NET Ex |  Native Ex   |
+|-------------------------------:|:-------:|:---:|:-----:|:-------:|:------------:|:-------:|:------------:|
+|                    **Datadog** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|                  **Dynatrace** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|       **Firebase Crashlytics** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|       **Microsoft App Center** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|      [**New Relic**][newrelic] |    ✅    |  ✅  |   ❌   |    ❌    |      ❌       |    ✅    | ➗ [[1]](#n1) |
+|                     **Raygun** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|        **[Sentry.io][sentry]** |    ✅    |  ✅  |   ✅   |    ✅    | ➗ [[2]](#n2) |    ✅    |      ✅       |
+|                                |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|                                |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|                                |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
 
 Notes:
 
-1. Android native crash reporting is still in development and actually is not enabled for .NET MAUI Android apps:
+1. <a name="n1"></a> Android native crash reporting is still in development and actually is not enabled for .NET MAUI Android apps:
    https://docs.newrelic.com/docs/mobile-monitoring/mobile-monitoring-ui/crashes/investigate-mobile-app-crash-report/#android-native-reporting
+2. <a name="n2"></a>There is no explicit native Tizen SDK for Sentry, however the .NET SDK does have support for all .NET frameworks,
+   which includes the Tizen .NET SDK.   
+
+<!-- START: links -->
+[newrelic]: https://newrelic.com/
+[sentry]:  https://sentry.io/
+<!-- END: links -->
+
 
 ## Cloud Services
 
@@ -106,10 +115,4 @@ Notes:
 **Cons:**
 
 * ...
-
-
-<!-- links -->
-
-[newrelic]: https://newrelic.com/
-[sentry]:  https://sentry.io/
 
