@@ -4,20 +4,21 @@ A playground for testing out different cloud services with regards to crashes an
 
 ## Overview
 
-Below is a matrix of the cloud services, SDK features and platforms:
+Below is a matrix of the cloud services, SDK features and platforms. Clicking the cloud service name will take you to a
+more detailed section of the service. I have also attached notes to various parts for more information. 
 
-|                   Service Name | Android | iOS | macOS | Windows |    Tizen     | .NET Ex |  Native Ex   |
-|-------------------------------:|:-------:|:---:|:-----:|:-------:|:------------:|:-------:|:------------:|
-|                    **Datadog** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|                  **Dynatrace** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|       **Firebase Crashlytics** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|       **Microsoft App Center** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|      [**New Relic**][newrelic] |    ✅    |  ✅  |   ❌   |    ❌    |      ❌       |    ✅    | ➗ [[1]](#n1) |
-|                     **Raygun** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|        **[Sentry.io][sentry]** |    ✅    |  ✅  |   ✅   |    ✅    | ➗ [[2]](#n2) |    ✅    |      ✅       |
-|                                |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|                                |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
-|                                |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|                Service Name | Android | iOS | macOS | Windows |    Tizen     | .NET Ex |  Native Ex   |
+|----------------------------:|:-------:|:---:|:-----:|:-------:|:------------:|:-------:|:------------:|
+|                 **Datadog** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|               **Dynatrace** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|    **Firebase Crashlytics** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|    **Microsoft App Center** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+| [**New Relic**](#new-relic) |    ✅    |  ✅  |   ❌   |    ❌    |      ❌       |    ✅    | ➗ [[1]](#n1) |
+|                  **Raygun** |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|  [**Sentry.io**](#sentryio) |    ✅    |  ✅  |   ✅   |    ✅    | ➗ [[2]](#n2) |    ✅    |      ✅       |
+|                             |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|                             |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
+|                             |    ➖    |  ➖  |   ➖   |    ➖    |      ➖       |    ➖    |      ➖       |
 
 > **Key**  
 > ✅ → fully supported  
@@ -30,13 +31,7 @@ Below is a matrix of the cloud services, SDK features and platforms:
 1. <a name="n1"></a> **[New Relic]** Android native crash reporting is still in development and actually is not enabled for .NET MAUI Android apps:
    https://docs.newrelic.com/docs/mobile-monitoring/mobile-monitoring-ui/crashes/investigate-mobile-app-crash-report/#android-native-reporting
 2. <a name="n2"></a> **[Sentry.io]** There is no explicit native Tizen SDK for Sentry, however the .NET SDK does have support for all .NET frameworks,
-   which includes the Tizen .NET SDK.   
-
-<!-- START: links -->
-[newrelic]: https://newrelic.com/
-[sentry]:  https://sentry.io/
-<!-- END: links -->
-
+   which includes the Tizen .NET SDK.
 
 ## Types of Crashes & Exceptions
 
