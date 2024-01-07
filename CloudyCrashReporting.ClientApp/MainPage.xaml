@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CloudyCrashReporting.ClientApp"
+             xmlns:core="clr-namespace:CloudyCrashReporting;assembly=CloudyCrashReporting"
+             x:Class="CloudyCrashReporting.ClientApp.MainPage"
+             x:DataType="core:CrashReporterTester">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="16,32"
+            Spacing="16">
+            
+            <Label
+                Text="Provider Name:"
+                FontAttributes="Bold" />
+
+            <Label
+                Text="{Binding ProviderName}" />
+            <Button
+                Text="Test Crash"
+                Clicked="TestCrash" />
+            
+            <Label
+                Text="Handled Exceptions"
+                FontAttributes="Bold" />
+
+            <Label
+                Text="Handled .NET exceptions will not crash the app, so typical error APIs can be used." />
+            <Button
+                Text="Catch exception"
+                Clicked="HandleDotNetException" />
+            
+            <Label
+                Text="Unhandled .NET Exceptions"
+                FontAttributes="Bold" />
+            
+            <Label
+                Text="Unhandled .NET exceptions will crash the app, but the stack trace and error information is only
+available to .NET-based exception tracking. Native crash reporters will not have enough information and 
+the stack trace will be incorrect/insufficient. Below are buttons to throw a simple .NET exception
+from different threads." />
+            <Button
+                Text="Current / UI thread"
+                Clicked="ThrowDotNetException" />
+            <Button
+                Text="Task thread pool"
+                Clicked="ThrowDotNetTaskException" />
+            <Button
+                Text="A new thread"
+                Clicked="ThrowDotNetThreadException" />
+            
+            
+            <Label
+                Text="Unhandled Platform Exceptions"
+                FontAttributes="Bold" />
+            
+            <Label
+                Text="Unhandled Platform exceptions will crash the app." />
+            <Button
+                Text="Queue invalid operation"
+                Clicked="ThrowPlatformException" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
