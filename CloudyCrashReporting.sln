@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudyCrashReporting.ClientApp", "CloudyCrashReporting.ClientApp\CloudyCrashReporting.ClientApp.csproj", "{2E198279-4304-4060-8444-8B578EF6D6F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudyCrashReporting", "CloudyCrashReporting\CloudyCrashReporting.csproj", "{FECC25BA-BDA0-49DD-B8E2-EBB10FD5FE56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudyCrashReporting.Core", "CloudyCrashReporting.Core\CloudyCrashReporting.Core.csproj", "{FECC25BA-BDA0-49DD-B8E2-EBB10FD5FE56}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudyCrashReporting.Providers.NewRelic", "CloudyCrashReporting.Providers.NewRelic\CloudyCrashReporting.Providers.NewRelic.csproj", "{746C3D0E-BA81-44F4-903A-63BBB6755431}"
 EndProject

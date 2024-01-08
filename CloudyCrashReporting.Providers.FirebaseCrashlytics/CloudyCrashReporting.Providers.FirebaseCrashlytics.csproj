@@ -35,7 +35,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CloudyCrashReporting\CloudyCrashReporting.csproj" />
+      <ProjectReference Include="..\CloudyCrashReporting.Core\CloudyCrashReporting.Core.csproj" />
     </ItemGroup>
     
 </Project>

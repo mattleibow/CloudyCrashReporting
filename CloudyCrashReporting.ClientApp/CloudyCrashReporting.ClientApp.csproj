@@ -64,7 +64,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\CloudyCrashReporting.Providers.Raygun\CloudyCrashReporting.Providers.Raygun.csproj" />
-	  <ProjectReference Include="..\CloudyCrashReporting\CloudyCrashReporting.csproj" />
+	  <ProjectReference Include="..\CloudyCrashReporting.Core\CloudyCrashReporting.Core.csproj" />
 	</ItemGroup>
 
 	<!--<Import Project="..\CloudyCrashReporting.Providers.FirebaseCrashlytics\CloudyCrashReporting.Providers.FirebaseCrashlytics.targets" />-->
