@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudyCrashReporting.Provid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudyCrashReporting.Providers.FirebaseCrashlytics", "CloudyCrashReporting.Providers.FirebaseCrashlytics\CloudyCrashReporting.Providers.FirebaseCrashlytics.csproj", "{6D2D6320-B1DF-48B5-AC6D-6B8CA10C2467}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudyCrashReporting.Providers.Raygun", "CloudyCrashReporting.Providers.Raygun\CloudyCrashReporting.Providers.Raygun.csproj", "{9308CEC2-8D26-4503-ACD1-5D9D80077074}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{6D2D6320-B1DF-48B5-AC6D-6B8CA10C2467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D2D6320-B1DF-48B5-AC6D-6B8CA10C2467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D2D6320-B1DF-48B5-AC6D-6B8CA10C2467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9308CEC2-8D26-4503-ACD1-5D9D80077074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9308CEC2-8D26-4503-ACD1-5D9D80077074}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9308CEC2-8D26-4503-ACD1-5D9D80077074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9308CEC2-8D26-4503-ACD1-5D9D80077074}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

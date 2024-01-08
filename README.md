@@ -11,11 +11,11 @@ more detailed section of the service. I have also attached notes to various part
 
 |                   Cloud Service | Android | iOS |    macOS     | Windows |    Tizen     |  .NET MAUI   |   .NET Ex    |  Native Ex   |
 |--------------------------------:|:-------:|:---:|:------------:|:-------:|:------------:|:------------:|:------------:|:------------:|
-|         [**DataDog**](#datadog) |    ✅    |  ✅  |      ❌       |    ❌    |      ❌       |      ❌       | ❌ [[5]](#n5) | ➖ [[6]](#n6) |
+|         [**DataDog**](#datadog) |    ✅    |  ✅  |      ❌       |    ❌    |      ❌       |      ❌       | ❌ [[5]](#n5) | ➗ [[6]](#n6) |
 |                   **Dynatrace** |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
 | [**Firebase Crashlytics**](#fb) |    ✅    |  ✅  | ❌ [[4]](#n4) |    ❌    |      ❌       | ➗ [[7]](#n7) | ➗ [[3]](#n3) |      ✅       |
 |     [**New Relic**](#new-relic) |    ✅    |  ✅  |      ❌       |    ❌    |      ❌       |      ✅       |      ✅       | ➗ [[1]](#n1) |
-|                      **Raygun** |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
+|           [**Raygun**](#raygun) |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ✅       |      ➖       |      ➖       |
 |      [**Sentry.io**](#sentryio) |    ✅    |  ✅  |      ✅       |    ✅    | ➗ [[2]](#n2) |      ✅       |      ✅       |      ✅       |
 |    **Visual Studio App Center** |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
 |                                 |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
@@ -135,6 +135,10 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 
 ### DataDog
 
+> SUPPORT: Currently there is no official or community bindings for the SDKs, so I opened issues to find out.  
+> Android: https://github.com/DataDog/dd-sdk-android/issues/1811
+> iOS: https://github.com/DataDog/dd-sdk-ios/issues/1617
+
 **Links:**
 
 * Home: https://www.datadoghq.com/
@@ -148,8 +152,31 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 
 **Cons:**
 
-* No .NET mobile bindings so not really usable in a .NET MAUI app 
+* No .NET mobile bindings so not really usable in a .NET MAUI app - or any .NET mobile app
 
+
+### Raygun
+
+**Links:**
+
+* Home: https://raygun.com
+* .NET MAUI: https://raygun.com/documentation/language-guides/dotnet/crash-reporting/maui/
+
+**Pros:**
+
+* Easy setup with builder integration
+* Fully open source SDKs:
+    * .NET MAUI: https://github.com/MindscapeHQ/raygun4maui
+    * .NET: https://github.com/MindscapeHQ/raygun4net
+* Native crash reporting for Android, iOS and macOS
+
+**Cons:**
+
+* Does not collect exceptions from unobserved Tasks. I opened a new suggestion just in case: 
+  https://raygun.com/thinktank/suggestion/185362 I also made a PR:  
+  https://github.com/MindscapeHQ/raygun4maui/pull/11
+* Does not report exceptions on non-UI threads on iOS: https://github.com/MindscapeHQ/raygun4maui/issues/12
+* BUG? Does not report native exceptions on iOS: https://github.com/MindscapeHQ/raygun4maui/issues/13
 
 
 ### OTHER

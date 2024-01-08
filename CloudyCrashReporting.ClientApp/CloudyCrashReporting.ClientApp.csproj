@@ -63,10 +63,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\CloudyCrashReporting.Providers.FirebaseCrashlytics\CloudyCrashReporting.Providers.FirebaseCrashlytics.csproj" />
+	  <ProjectReference Include="..\CloudyCrashReporting.Providers.Raygun\CloudyCrashReporting.Providers.Raygun.csproj" />
 	  <ProjectReference Include="..\CloudyCrashReporting\CloudyCrashReporting.csproj" />
 	</ItemGroup>
-	
-	<Import Project="..\CloudyCrashReporting.Providers.FirebaseCrashlytics\CloudyCrashReporting.Providers.FirebaseCrashlytics.targets" />
+
+	<!--<Import Project="..\CloudyCrashReporting.Providers.FirebaseCrashlytics\CloudyCrashReporting.Providers.FirebaseCrashlytics.targets" />-->
 	
 </Project>

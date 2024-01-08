@@ -60,6 +60,14 @@ public class CrashReporterTester
         }
     }
 
+    public async void ThrowDotNetAwaitedTaskException()
+    {
+        await Task.Run(() =>
+        {
+            _dotnetTester.ThrowException("From an awaited Task thread.");
+        });
+    }
+
     public void ThrowDotNetThreadException()
     {
         var thread = new Thread(() =>

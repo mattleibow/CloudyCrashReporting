@@ -45,6 +45,9 @@ from different threads." />
                 Clicked="ThrowDotNetException" />
             <Button
                 Text="Task thread pool"
+                Clicked="ThrowDotNetAwaitedTaskException" />
+            <Button
+                Text="Task thread pool (unobserved)"
                 Clicked="ThrowDotNetTaskException" />
             <Button
                 Text="A new thread"
@@ -60,6 +63,8 @@ from different threads." />
             <Button
                 Text="Queue invalid operation"
                 Clicked="ThrowPlatformException" />
+            
+            <Label x:Name="testLabel" />
         </VerticalStackLayout>
     </ScrollView>
 

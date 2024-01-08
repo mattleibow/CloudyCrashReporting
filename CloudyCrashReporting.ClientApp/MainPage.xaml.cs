@@ -28,6 +28,9 @@ public partial class MainPage : ContentPage
 	private void ThrowDotNetTaskException(object? sender, EventArgs e) =>
 		_tester.ThrowDotNetTaskException();
 
+	private void ThrowDotNetAwaitedTaskException(object? sender, EventArgs e) =>
+		_tester.ThrowDotNetAwaitedTaskException();
+
 	private void ThrowDotNetThreadException(object? sender, EventArgs e) =>
 		_tester.ThrowDotNetThreadException();
 
