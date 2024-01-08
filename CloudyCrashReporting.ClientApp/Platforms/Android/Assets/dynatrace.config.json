@@ -1,0 +1,1 @@
+{	"android": {		"autoStart": {			"beaconUrl": "https://bf46611pni.bf.dynatrace.com/mbeacon",			"applicationId": "932d1af8-e805-4a30-ba25-f13644276bce"		},		"userOptIn": true,		"debug": {			"agentLogging": true		},		"agentBehavior": {			"startupLoadBalancing": true		}	}}

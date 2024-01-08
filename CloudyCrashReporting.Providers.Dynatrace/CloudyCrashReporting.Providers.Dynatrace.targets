@@ -1,0 +1,7 @@
+<Project>
+
+    <ItemGroup>
+        <PackageReference Include="Dynatrace.OneAgent.MAUI" Version="1.279.1" />
+    </ItemGroup>
+
+</Project>

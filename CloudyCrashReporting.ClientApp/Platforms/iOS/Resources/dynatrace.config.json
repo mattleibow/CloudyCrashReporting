@@ -1,0 +1,9 @@
+{
+	"ios": {
+		"DTXApplicationId": "932d1af8-e805-4a30-ba25-f13644276bce",
+		"DTXBeaconUrl": "https://bf46611pni.bf.dynatrace.com/mbeacon",
+		"DTXUserOptIn": true,
+		"DTXStartupLoadBalancing": true,
+		"DTXLogLevel": "ALL"
+	}
+}

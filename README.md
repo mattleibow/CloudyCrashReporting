@@ -12,15 +12,12 @@ more detailed section of the service. I have also attached notes to various part
 |                   Cloud Service | Android | iOS |    macOS     | Windows |    Tizen     |  .NET MAUI   |   .NET Ex    |  Native Ex   |
 |--------------------------------:|:-------:|:---:|:------------:|:-------:|:------------:|:------------:|:------------:|:------------:|
 |         [**DataDog**](#datadog) |    ✅    |  ✅  |      ❌       |    ❌    |      ❌       |      ❌       | ❌ [[5]](#n5) | ➗ [[6]](#n6) |
-|                   **Dynatrace** |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
+|     [**Dynatrace**](#dynatrace) |    ✅    |  ✅  |      ❌       |    ❌    |      ❌       |      ✅       |      ✅       |      ✅       |
 | [**Firebase Crashlytics**](#fb) |    ✅    |  ✅  | ❌ [[4]](#n4) |    ❌    |      ❌       | ➗ [[7]](#n7) | ➗ [[3]](#n3) |      ✅       |
 |     [**New Relic**](#new-relic) |    ✅    |  ✅  |      ❌       |    ❌    |      ❌       |      ✅       |      ✅       | ➗ [[1]](#n1) |
 |           [**Raygun**](#raygun) |    ✅    |  ✅  |      ✅       |    ✅    | ➗ [[8]](#n8) |      ✅       |      ✅       | ➗ [[9]](#n9) |
 |      [**Sentry.io**](#sentryio) |    ✅    |  ✅  |      ✅       |    ✅    | ➗ [[2]](#n2) |      ✅       |      ✅       |      ✅       |
 |    **Visual Studio App Center** |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
-|                                 |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
-|                                 |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
-|                                 |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
 
 > **Key**  
 > ✅ → fully supported  
@@ -50,6 +47,7 @@ more detailed section of the service. I have also attached notes to various part
    .NET frameworks, which includes the Tizen .NET SDK.
 9. <a name="n9"></a> **[Raygun]** The docs state native crash reporting and there is some for Android, however iOS does
    does not seem to do anything: https://github.com/MindscapeHQ/raygun4maui/issues/13
+
 
 ## Types of Crashes & Exceptions
 
@@ -164,7 +162,7 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 **Links:**
 
 * Home: https://raygun.com
-* .NET MAUI: https://raygun.com/documentation/language-guides/dotnet/crash-reporting/maui/
+* .NET MAUI: https://raygun.com/documentation/language-guides/dotnet/crash-reporting/maui
 
 **Pros:**
 
@@ -183,18 +181,22 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 * BUG? Does not report native exceptions on iOS: https://github.com/MindscapeHQ/raygun4maui/issues/13
 
 
-### OTHER
+### Dynatrace
 
 **Links:**
 
-* Home:
-* .NET MAUI:
+* Home: https://www.dynatrace.com
+* .NET MAUI: https://docs.dynatrace.com/docs/platform-modules/digital-experience/mobile-applications/development-frameworks/maui
 
 **Pros:**
 
-* ...
+* Native crash reporting for Android and iOS
 
 **Cons:**
 
-* ...
-
+* Console setup is simple, but the NuGets for the app does not support being used as a transitive dependency and also
+  generates files in the project tree which will end up being checked into source control as well as break incremental
+  builds. Basically, a bit hard to use.
+* Does not collect exceptions from unobserved Tasks
+* Does not collect crashes from background threads on Android
+* Web console is not the greatest
