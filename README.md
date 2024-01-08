@@ -59,51 +59,47 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 
 ## Cloud Services
 
-### New Relic
+### DataDog
+
+> SUPPORT: Currently there is no official or community bindings for the SDKs, so I opened issues to find out.  
+> Android: https://github.com/DataDog/dd-sdk-android/issues/1811
+> iOS: https://github.com/DataDog/dd-sdk-ios/issues/1617
 
 **Links:**
 
-* Home: https://newrelic.com
-* Mobile: [**Introduction to mobile monitoring**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring)
-* .NET MAUI: [**Monitor your .NET MAUI mobile app**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-maui-dotnet/monitor-your-net-maui-application)
+* Home: https://www.datadoghq.com/
+* .NET MAUI: There is no official or community support for .NET mobile frameworks.
 
 **Pros:**
 
-* Easy to set up
-* Collects all crashes on iOS (managed/native)
-* Partially open source SDKs:
-  * .NET MAUI: https://github.com/newrelic/newrelic-maui-plugin
-  * Android: https://github.com/newrelic/newrelic-android-agent 
-  * iOS: Not open source
+* Open source:
+  * Android: https://github.com/DataDog/dd-sdk-android
+  * iOS: https://github.com/DataDog/dd-sdk-ios
 
 **Cons:**
 
-* No support for desktop (macOS and Windows)
+* No .NET mobile bindings so not really usable in a .NET MAUI app - or any .NET mobile app
+
+
+### Dynatrace
+
+**Links:**
+
+* Home: https://www.dynatrace.com
+* .NET MAUI: https://docs.dynatrace.com/docs/platform-modules/digital-experience/mobile-applications/development-frameworks/maui
+
+**Pros:**
+
+* Native crash reporting for Android and iOS
+
+**Cons:**
+
+* Console setup is simple, but the NuGets for the app does not support being used as a transitive dependency and also
+  generates files in the project tree which will end up being checked into source control as well as break incremental
+  builds. Basically, a bit hard to use.
 * Does not collect exceptions from unobserved Tasks
 * Does not collect crashes from background threads on Android
-
-
-### Sentry.io
-
-**Links:**
-
-* Home: https://sentry.io
-* .NET MAUI: [**Sentry for Multi-platform App UI (MAUI)**](https://docs.sentry.io/platforms/dotnet/guides/maui)
-
-**Pros:**
-
-* Easy setup - especially the integration with the builder
-* Fully open source SDKs:
-  * .NET MAUI: https://github.com/getsentry/sentry-dotnet
-  * Android: https://github.com/getsentry/sentry-java
-  * iOS/macOS: https://github.com/getsentry/sentry-cocoa
-* Native crash reporting for Android, iOS and macOS
-* Catches exceptions from unobserved tasks
-
-**Cons:**
-
-* None yet, in my limited testing
-
+* Web console is not the greatest
 
 ### <a name="#fb"></a> Firebase Crashlytics
 
@@ -135,26 +131,28 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 * No simple, cross-platform API to get started, but the community has a plugin: https://github.com/TobiasBuchholz/Plugin.Firebase
 
 
-### DataDog
-
-> SUPPORT: Currently there is no official or community bindings for the SDKs, so I opened issues to find out.  
-> Android: https://github.com/DataDog/dd-sdk-android/issues/1811
-> iOS: https://github.com/DataDog/dd-sdk-ios/issues/1617
+### New Relic
 
 **Links:**
 
-* Home: https://www.datadoghq.com/
-* .NET MAUI: There is no official or community support for .NET mobile frameworks.
+* Home: https://newrelic.com
+* Mobile: [**Introduction to mobile monitoring**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile/get-started/introduction-mobile-monitoring)
+* .NET MAUI: [**Monitor your .NET MAUI mobile app**](https://docs.newrelic.com/docs/mobile-monitoring/new-relic-mobile-maui-dotnet/monitor-your-net-maui-application)
 
 **Pros:**
 
-* Open source:
-  * Android: https://github.com/DataDog/dd-sdk-android
-  * iOS: https://github.com/DataDog/dd-sdk-ios
+* Easy to set up
+* Collects all crashes on iOS (managed/native)
+* Partially open source SDKs:
+  * .NET MAUI: https://github.com/newrelic/newrelic-maui-plugin
+  * Android: https://github.com/newrelic/newrelic-android-agent 
+  * iOS: Not open source
 
 **Cons:**
 
-* No .NET mobile bindings so not really usable in a .NET MAUI app - or any .NET mobile app
+* No support for desktop (macOS and Windows)
+* Does not collect exceptions from unobserved Tasks
+* Does not collect crashes from background threads on Android
 
 
 ### Raygun
@@ -181,22 +179,25 @@ In a mobile or desktop app, there are a few types of issues that can cause catas
 * BUG? Does not report native exceptions on iOS: https://github.com/MindscapeHQ/raygun4maui/issues/13
 
 
-### Dynatrace
+### Sentry.io
 
 **Links:**
 
-* Home: https://www.dynatrace.com
-* .NET MAUI: https://docs.dynatrace.com/docs/platform-modules/digital-experience/mobile-applications/development-frameworks/maui
+* Home: https://sentry.io
+* .NET MAUI: [**Sentry for Multi-platform App UI (MAUI)**](https://docs.sentry.io/platforms/dotnet/guides/maui)
 
 **Pros:**
 
-* Native crash reporting for Android and iOS
+* Easy setup - especially the integration with the builder
+* Fully open source SDKs:
+  * .NET MAUI: https://github.com/getsentry/sentry-dotnet
+  * Android: https://github.com/getsentry/sentry-java
+  * iOS/macOS: https://github.com/getsentry/sentry-cocoa
+* Native crash reporting for Android, iOS and macOS
+* Catches exceptions from unobserved tasks
 
 **Cons:**
 
-* Console setup is simple, but the NuGets for the app does not support being used as a transitive dependency and also
-  generates files in the project tree which will end up being checked into source control as well as break incremental
-  builds. Basically, a bit hard to use.
-* Does not collect exceptions from unobserved Tasks
-* Does not collect crashes from background threads on Android
-* Web console is not the greatest
+* Profiling is not yet available for .NET MAUI
+* Does not have advanced user analytics, like new vs returning users
+

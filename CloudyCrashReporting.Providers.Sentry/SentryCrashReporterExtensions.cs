@@ -9,7 +9,7 @@ public static class SentryCrashReporterExtensions
         builder.UseCoreCrashReporter();
         
         builder.Services.AddTransient<ICrashReporterProvider, SentryCrashReporterProvider>();
-        
+
         builder.UseSentry(options =>
         {
             // The DSN is the only required setting.
@@ -25,6 +25,14 @@ public static class SentryCrashReporterExtensions
             // We recommend adjusting this value in production.
             options.TracesSampleRate = 1.0;
 
+            // Configure unique user ID. 
+            var userId = Preferences.Default.Get("SentryUserId", Guid.NewGuid().ToString("N"));
+            Preferences.Default.Set("SentryUserId", userId);
+            options.ConfigureScope(scope =>
+            {
+                scope.User.Id = userId;
+            });
+      
             // Other Sentry options can be set here.
         });
         
