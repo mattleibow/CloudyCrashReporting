@@ -15,7 +15,7 @@ more detailed section of the service. I have also attached notes to various part
 |                   **Dynatrace** |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
 | [**Firebase Crashlytics**](#fb) |    ✅    |  ✅  | ❌ [[4]](#n4) |    ❌    |      ❌       | ➗ [[7]](#n7) | ➗ [[3]](#n3) |      ✅       |
 |     [**New Relic**](#new-relic) |    ✅    |  ✅  |      ❌       |    ❌    |      ❌       |      ✅       |      ✅       | ➗ [[1]](#n1) |
-|           [**Raygun**](#raygun) |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ✅       |      ➖       |      ➖       |
+|           [**Raygun**](#raygun) |    ✅    |  ✅  |      ✅       |    ✅    | ➗ [[8]](#n8) |      ✅       |      ✅       | ➗ [[9]](#n9) |
 |      [**Sentry.io**](#sentryio) |    ✅    |  ✅  |      ✅       |    ✅    | ➗ [[2]](#n2) |      ✅       |      ✅       |      ✅       |
 |    **Visual Studio App Center** |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
 |                                 |    ➖    |  ➖  |      ➖       |    ➖    |      ➖       |      ➖       |      ➖       |      ➖       |
@@ -46,6 +46,10 @@ more detailed section of the service. I have also attached notes to various part
    the level of support for native exceptions. However, the docs and SDK do indicate that this is supported.
 7. <a name="n7"></a> **[Firebase Crashlytics]** There is no official .NET MAUI SDK, but there is a community plugin for
    Android and iOS: https://github.com/TobiasBuchholz/Plugin.Firebase
+8. <a name="n8"></a> **[Raygun]** There is no explicit native Tizen SDK, however the .NET SDK does have support for all
+   .NET frameworks, which includes the Tizen .NET SDK.
+9. <a name="n9"></a> **[Raygun]** The docs state native crash reporting and there is some for Android, however iOS does
+   does not seem to do anything: https://github.com/MindscapeHQ/raygun4maui/issues/13
 
 ## Types of Crashes & Exceptions
 
